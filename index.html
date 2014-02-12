@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>What's the Color of the Sky in Berlin?</title>
+		<title>What Color is the Sky in San Francisco?</title>
 		<meta charset="utf8">
 		<meta name="viewport" content="width=device-width">
 		<style>
@@ -45,7 +45,7 @@
 		</style>
 		<script>
 			var yql = 'http://query.yahooapis.com/v1/public/yql?format=json&callback=imageLoaded&q=',
-				query = 'select * from data.uri where url="http://www.met.fu-berlin.de/wetter/webcam/Cam00_prev.jpg"',
+				query = 'select * from data.uri where url="http://cdn.abclocal.go.com/three/kgo/webcam/emeryville.jpg"',
 				img = new Image,
 				canvas = document.createElement("canvas"),
 				head = document.querySelector('head'),
@@ -108,21 +108,44 @@
 	</head>
 	<body title="Yeah, that's the color of it...">
 		<header>
-			<h1>What's the Color of the Sky in Berlin?</h1>
+			<h1>What Color is the Sky in San Francisco?</h1>
 		</header>
 		<strong id="color">Loading...</strong>
 		<footer>
 			<p>
-				Brought to you by <a href="http://twitter.com/salomvary" target="_blank">@salomvary</a> •
-				data source <a href="http://www.met.fu-berlin.de/de/wetter/webcam/" target="_blank">Met FU Berlin</a>
+				Brought to you by <a href="http://twitter.com/salomvary">@salomvary</a> •
+				data source <a href="http://abclocal.go.com/kgo/feature?section=weather/webcams&id=6095558">abc7news.com</a> •
+				<a href="http://salomvary.github.io/whatsthecoloroftheskyinberlin/">Berlin edition</a>
 			</p>
 		</footer>
 		<div style="display:none">
-			<svg width="50" height="500" version="1.1"
-			xmlns="http://www.w3.org/2000/svg" id="svg" fill="#fff">
+			<svg width="75" height="400" version="1.1"
+				xmlns="http://www.w3.org/2000/svg" id="svg" fill="#fff" stroke="#fff">
 				<g opacity="0.2">
-					<polygon points="25,0 40,500 10,500"/>
-					<circle r="25" cx="25" cy="190"/>
+					<!-- crown -->
+					<g transform="translate(5, 10)">
+						<polygon points="2.5,0 5,90 0, 90" transform="translate(6,0)"/>
+						<polygon points="2.5,5 5,90 0, 90" transform="translate(27,0)"/>
+						<polygon points="2.5,0 5,90 0, 90" transform="translate(47,0)"/>
+					</g>
+					<!-- legs -->
+					<g transform="translate(5, 100)">
+						<!-- vertical -->
+						<!-- left bottom -->
+						<line x1="8" x2="20" y1="0" y2="90" stroke-width="5"/>
+						<line x1="20" x2="0" y1="90" y2="290" stroke-width="5"/>
+						<!-- middle bottom -->
+						<line x1="30" x2="30" y1="0" y2="290" stroke-width="5"/>
+						<!-- right bottom -->
+						<line x1="50" x2="40" y1="0" y2="90" stroke-width="5"/>
+						<line x1="40" x2="60" y1="90" y2="290" stroke-width="5"/>
+						<!-- horizontal -->
+						<line x1="0" x2="58" y1="0" y2="0" stroke-width="8"/>
+						<line x1="12" x2="45" y1="45" y2="45" stroke-width="10"/>
+						<line x1="17" x2="40" y1="90" y2="90" stroke-width="10"/>
+						<line x1="12" x2="45" y1="160" y2="160" stroke-width="10"/>
+						<line x1="5" x2="55" y1="245" y2="245" stroke-width="10"/>
+					</g>
 				</g>
 			</svg>
 		</div>

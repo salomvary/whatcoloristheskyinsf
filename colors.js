@@ -11,7 +11,7 @@ function getSkyColor(img, canvas) {
 	ctx.drawImage( img, 0, 0 );
 
 	// slice off the sky
-	var padding = 1, cut = 0.6;
+	var padding = 1, cut = 0.46;
 	var data = ctx.getImageData(
 			padding, // top
 			padding, // left
