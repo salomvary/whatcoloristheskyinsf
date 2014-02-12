@@ -11,12 +11,15 @@ function getSkyColor(img, canvas) {
 	ctx.drawImage( img, 0, 0 );
 
 	// slice off the sky
-	var padding = 1, cut = 0.46;
+	var paddingLeft = 155,
+			paddingTop = 9,
+			height = 85;
 	var data = ctx.getImageData(
-			padding, // top
-			padding, // left
-			img.width - 2 * padding, // width
-			Math.round((img.height - 2 * padding) * cut) ).data;
+			paddingLeft, // left
+			paddingTop, // top
+			img.width - paddingLeft, // width
+			height
+	).data;
 
 	// calculate average color
 	var color = [0, 0, 0];
