@@ -1,7 +1,7 @@
 {
-  "name": "whatcoloristheskyinberlin",
+  "name": "whatcoloristheskyinsf",
   "version": "0.0.0",
-  "description": "What color is the sky in berlin?",
+  "description": "What Color is the Sky in San Francisco?",
   "dependencies": {
     "canvas": "~1.0.2",
     "oauth-client": "~0.3.0"

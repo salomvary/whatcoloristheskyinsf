@@ -29,7 +29,7 @@ function loop() {
 }
 
 function getImage(callback) {
-	var url = 'http://www.met.fu-berlin.de/wetter/webcam/Cam00_prev.jpg';
+	var url = 'http://ir0.mobify.com/c4/jpg/500/http://webmarin.com/images/wc/Camera.jpg';
 	var req = http.get(url, function(res) {
 		if(res.statusCode == 200) {
 			var chunks = [];
